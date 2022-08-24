@@ -6,6 +6,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #cf1b15;
+    --font-fant: 'Dancing Script', cursive;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: white;
+}
+
 ul,
 li {
     list-style: none;
@@ -13,6 +23,34 @@ li {
 
 a {
     text-decoration: none;
+}
+
+.heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart>.line {
+    width: 350px;
+    height: 1px;
+    background-color: #333;
+    margin: 50px 0;
+    position: relative;
+}
+
+.heart>.line>i {
+    color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0 10px;
+}
+
+.red-color {
+    color: var(--primary-color);
 }
 
 header {
@@ -74,14 +112,158 @@ nav>ul>li:last-child>a>span {
     align-items: center;
 }
 
-.header-images>.slogan>h1{
+.header-images>.slogan>h1 {
     font-size: 120px;
-    font-family: 'Dancing Script', cursive;
+    font-family: var(--font-fant);
     color: white;
 }
 
-.header-images>.slogan>p{
+.header-images>.slogan>p {
     margin: 35px 0;
     color: white;
     font-family: sans-serif;
+}
+
+.our-story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.our-story>.our-story-top {
+    padding: 100px 0 200px 0;
+    width: 30%;
+    /* background-color: rebeccapurple; */
+    text-align: center;
+}
+
+.our-story>.our-story-top>h3 {
+    font-size: 50px;
+    font-family: var(--font-fant);
+}
+
+.our-story>.our-story-top>p {
+    color: gray;
+    font-family: sans-serif;
+}
+
+.our-story>.our-story-top>time {
+    display: inline-block;
+    margin: 25px 0;
+    color: var(--primary-color);
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
+.our-story>.our-story-bottom {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.our-story>.our-story-bottom::after {
+    content: "";
+    display: block;
+    border: 20px solid white;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.our-story>.our-story-bottom>.our-story-bottom-content {
+    margin: 150px 0;
+    width: 80%;
+    text-align: center;
+}
+
+.our-story>.our-story-bottom>.our-story-bottom-content>h3 {
+    font-size: 50px;
+    font-family: var(--font-fant);
+}
+
+.our-story>.our-story-bottom>.our-story-bottom-content>.double-par {
+    display: flex;
+    text-align: justify;
+}
+
+.our-story>.our-story-bottom>.our-story-bottom-content>.double-par>p {
+    margin: 0 50px;
+    font-size: 20px;
+    color: gray;
+    line-height: 1.5em;
+}
+
+.who-are-we {}
+
+.who-are-we>.who-are-we-first-section {
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/set1-young-couple.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.who-are-we>.who-are-we-first-section::after {
+    content: "";
+    display: block;
+    border: 20px solid white;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.who-are-we>.who-are-we-first-section>h3 {
+    font-size: 50px;
+    font-family: var(--font-fant);
+    color: white;
+}
+
+.who-are-we>.who-are-we-first-section>p {
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.who-are-we>.who-are-we-second-section {
+    display: flex;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.who-are-we>.who-are-we-second-section>.left {
+    margin-left: 100px;
+}
+
+.who-are-we>.who-are-we-second-section h3 {
+    font-family: var(--font-fant);
+    font-size: 60px;
+}
+
+.who-are-we>.who-are-we-second-section h5{
+    
+}
+
+.who-are-we>.who-are-we-second-section>.right {
+    margin-right: 100px;
+}
+
+.who-are-we>.who-are-we-second-section>.right>.person>img,
+.who-are-we>.who-are-we-second-section>.left>.person>img {
+    width: 70%;
+    margin: 50px 0;
 }
